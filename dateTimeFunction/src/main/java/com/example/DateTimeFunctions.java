@@ -33,8 +33,8 @@ public class DateTimeFunctions {
 	 */
 	public static LocalDate getLaterDatebyDays(LocalDate date, int x) {
 		//YOUR CODE STARTS HERE
-        LocalDate future = date.plusDays(x);
-        return future;
+        LocalDate futureDate = date.plusDays(x);
+        return futureDate;
 		//YOUR CODE ENDS HERE
 
 	}
@@ -59,9 +59,9 @@ public class DateTimeFunctions {
 		//YOUR CODE STARTS HERE
         Period difference = date1.isBefore(date2) ? date1.until(date2) : date2.until(date1);
 
-        String output = String.format("Years-%d:Months-%d:Days-%d", difference.getYears(),
+        String formattedDateDifference = String.format("Years-%d:Months-%d:Days-%d", difference.getYears(),
                 difference.getMonths(), difference.getDays());
-        return output;
+        return formattedDateDifference;
 		//YOUR CODE ENDS HERE
 
 	}
